@@ -9,6 +9,8 @@ import UIKit
 
 class PetListTblCell: UITableViewCell {
 
+    @IBOutlet weak var breedLbl: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

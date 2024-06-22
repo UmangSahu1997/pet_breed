@@ -9,13 +9,20 @@
 /* Begin PBXBuildFile section */
 		7B909D452C256E0000BC77DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B909D442C256E0000BC77DB /* AppDelegate.swift */; };
 		7B909D472C256E0000BC77DB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B909D462C256E0000BC77DB /* SceneDelegate.swift */; };
-		7B909D492C256E0000BC77DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B909D482C256E0000BC77DB /* ViewController.swift */; };
+		7B909D492C256E0000BC77DB /* PetListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B909D482C256E0000BC77DB /* PetListView.swift */; };
 		7B909D4C2C256E0000BC77DB /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 7B909D4B2C256E0000BC77DB /* Base */; };
 		7B909D4E2C256E0100BC77DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B909D4D2C256E0100BC77DB /* Assets.xcassets */; };
 		7B909D512C256E0100BC77DB /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 7B909D502C256E0100BC77DB /* Base */; };
 		7B909D5C2C256E0100BC77DB /* PetAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B909D5B2C256E0100BC77DB /* PetAppTests.swift */; };
 		7B909D662C256E0100BC77DB /* PetAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B909D652C256E0100BC77DB /* PetAppUITests.swift */; };
 		7B909D682C256E0100BC77DB /* PetAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B909D672C256E0100BC77DB /* PetAppUITestsLaunchTests.swift */; };
+		7B909D772C25868600BC77DB /* PetListTblCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B909D762C25868600BC77DB /* PetListTblCell.xib */; };
+		7B909D782C25868600BC77DB /* PetListTblCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B909D752C25868600BC77DB /* PetListTblCell.swift */; };
+		7B909D7B2C2597F600BC77DB /* BreedDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B909D7A2C2597F600BC77DB /* BreedDetailVC.swift */; };
+		7B909D7E2C25C41C00BC77DB /* BreedWiseTblViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B909D7D2C25C41C00BC77DB /* BreedWiseTblViewCell.xib */; };
+		7B909D7F2C25C41C00BC77DB /* BreedWiseTblViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B909D7C2C25C41C00BC77DB /* BreedWiseTblViewCell.swift */; };
+		7B909D812C26C51600BC77DB /* LikedPetsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B909D802C26C51600BC77DB /* LikedPetsVC.swift */; };
+		7B909D832C26C54B00BC77DB /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B909D822C26C54B00BC77DB /* BaseVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +46,7 @@
 		7B909D412C256E0000BC77DB /* PetApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B909D442C256E0000BC77DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B909D462C256E0000BC77DB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7B909D482C256E0000BC77DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7B909D482C256E0000BC77DB /* PetListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetListView.swift; sourceTree = "<group>"; };
 		7B909D4B2C256E0000BC77DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7B909D4D2C256E0100BC77DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B909D502C256E0100BC77DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +56,13 @@
 		7B909D612C256E0100BC77DB /* PetAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PetAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B909D652C256E0100BC77DB /* PetAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetAppUITests.swift; sourceTree = "<group>"; };
 		7B909D672C256E0100BC77DB /* PetAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7B909D752C25868600BC77DB /* PetListTblCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetListTblCell.swift; sourceTree = "<group>"; };
+		7B909D762C25868600BC77DB /* PetListTblCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PetListTblCell.xib; sourceTree = "<group>"; };
+		7B909D7A2C2597F600BC77DB /* BreedDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailVC.swift; sourceTree = "<group>"; };
+		7B909D7C2C25C41C00BC77DB /* BreedWiseTblViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedWiseTblViewCell.swift; sourceTree = "<group>"; };
+		7B909D7D2C25C41C00BC77DB /* BreedWiseTblViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BreedWiseTblViewCell.xib; sourceTree = "<group>"; };
+		7B909D802C26C51600BC77DB /* LikedPetsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedPetsVC.swift; sourceTree = "<group>"; };
+		7B909D822C26C54B00BC77DB /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +113,10 @@
 		7B909D432C256E0000BC77DB /* PetApp */ = {
 			isa = PBXGroup;
 			children = (
+				7B909D792C2597AA00BC77DB /* Controller */,
+				7B909D742C2585F700BC77DB /* View */,
 				7B909D442C256E0000BC77DB /* AppDelegate.swift */,
 				7B909D462C256E0000BC77DB /* SceneDelegate.swift */,
-				7B909D482C256E0000BC77DB /* ViewController.swift */,
 				7B909D4A2C256E0000BC77DB /* Main.storyboard */,
 				7B909D4D2C256E0100BC77DB /* Assets.xcassets */,
 				7B909D4F2C256E0100BC77DB /* LaunchScreen.storyboard */,
@@ -125,6 +140,28 @@
 				7B909D672C256E0100BC77DB /* PetAppUITestsLaunchTests.swift */,
 			);
 			path = PetAppUITests;
+			sourceTree = "<group>";
+		};
+		7B909D742C2585F700BC77DB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7B909D752C25868600BC77DB /* PetListTblCell.swift */,
+				7B909D762C25868600BC77DB /* PetListTblCell.xib */,
+				7B909D7C2C25C41C00BC77DB /* BreedWiseTblViewCell.swift */,
+				7B909D7D2C25C41C00BC77DB /* BreedWiseTblViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7B909D792C2597AA00BC77DB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7B909D482C256E0000BC77DB /* PetListView.swift */,
+				7B909D7A2C2597F600BC77DB /* BreedDetailVC.swift */,
+				7B909D802C26C51600BC77DB /* LikedPetsVC.swift */,
+				7B909D822C26C54B00BC77DB /* BaseVC.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +270,8 @@
 			files = (
 				7B909D4E2C256E0100BC77DB /* Assets.xcassets in Resources */,
 				7B909D512C256E0100BC77DB /* Base in Resources */,
+				7B909D7E2C25C41C00BC77DB /* BreedWiseTblViewCell.xib in Resources */,
+				7B909D772C25868600BC77DB /* PetListTblCell.xib in Resources */,
 				7B909D4C2C256E0000BC77DB /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,8 +297,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B909D492C256E0000BC77DB /* ViewController.swift in Sources */,
+				7B909D492C256E0000BC77DB /* PetListView.swift in Sources */,
+				7B909D812C26C51600BC77DB /* LikedPetsVC.swift in Sources */,
 				7B909D452C256E0000BC77DB /* AppDelegate.swift in Sources */,
+				7B909D832C26C54B00BC77DB /* BaseVC.swift in Sources */,
+				7B909D782C25868600BC77DB /* PetListTblCell.swift in Sources */,
+				7B909D7B2C2597F600BC77DB /* BreedDetailVC.swift in Sources */,
+				7B909D7F2C25C41C00BC77DB /* BreedWiseTblViewCell.swift in Sources */,
 				7B909D472C256E0000BC77DB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

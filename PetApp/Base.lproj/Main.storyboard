@@ -1,24 +1,139 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oMU-hF-Zd3">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--PetListView-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PetListView" title="PetListView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="PetListView" customModule="PetApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="pYT-Xs-uFm">
+                                <rect key="frame" x="16" y="119" width="361" height="683"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pYT-Xs-uFm" secondAttribute="trailing" constant="16" id="0Xo-o0-sRM"/>
+                            <constraint firstItem="pYT-Xs-uFm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="5C6-v0-Pkn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pYT-Xs-uFm" secondAttribute="bottom" constant="16" id="Xgn-ea-LCU"/>
+                            <constraint firstItem="pYT-Xs-uFm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="s32-jA-NGF"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Kr2-79-2Hd">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="NWG-be-Rsj">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="faN-xM-9BD">
+                                <rect key="frame" x="290" y="5" width="87" height="34.333333333333336"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="favBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8fH-Cm-d29"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="dogListTblView" destination="pYT-Xs-uFm" id="nAd-0o-vwH"/>
+                        <outlet property="favBtnAction" destination="NWG-be-Rsj" id="jpl-mJ-DjO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1046.5648854961833" y="3.5211267605633805"/>
+        </scene>
+        <!--BreedListVC-->
+        <scene sceneID="oTG-xg-dXq">
+            <objects>
+                <viewController storyboardIdentifier="BreedDetailVC" title="BreedListVC" id="PAo-Oa-fe3" customClass="BreedDetailVC" customModule="PetApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jD5-YZ-0Vt">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ftx-qA-4oK">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QbE-9q-M4F"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QbE-9q-M4F" firstAttribute="bottom" secondItem="ftx-qA-4oK" secondAttribute="bottom" id="A5L-Ae-vL3"/>
+                            <constraint firstItem="QbE-9q-M4F" firstAttribute="trailing" secondItem="ftx-qA-4oK" secondAttribute="trailing" id="aiD-YX-AjT"/>
+                            <constraint firstItem="ftx-qA-4oK" firstAttribute="top" secondItem="QbE-9q-M4F" secondAttribute="top" id="gzr-Ae-Fyv"/>
+                            <constraint firstItem="ftx-qA-4oK" firstAttribute="leading" secondItem="jD5-YZ-0Vt" secondAttribute="leading" id="x7t-Si-nY0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="perticularBreedTblView" destination="ftx-qA-4oK" id="By9-yk-Lqg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MSl-VN-2Wk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1811.4503816793892" y="14.788732394366198"/>
+        </scene>
+        <!--LikedPetsVC-->
+        <scene sceneID="5lZ-a7-wuU">
+            <objects>
+                <viewController restorationIdentifier="LikedPetsVC" storyboardIdentifier="LikedPetsVC" title="LikedPetsVC" id="8gq-Cr-W2B" customClass="LikedPetsVC" customModule="PetApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="acd-ah-UcM">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ohu-Ma-9gc">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="nY6-1k-I02"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ohu-Ma-9gc" firstAttribute="leading" secondItem="nY6-1k-I02" secondAttribute="leading" id="8A1-7Z-GYr"/>
+                            <constraint firstItem="nY6-1k-I02" firstAttribute="bottom" secondItem="Ohu-Ma-9gc" secondAttribute="bottom" id="Jv7-Lp-WeI"/>
+                            <constraint firstItem="Ohu-Ma-9gc" firstAttribute="top" secondItem="nY6-1k-I02" secondAttribute="top" id="npK-wM-GgK"/>
+                            <constraint firstItem="nY6-1k-I02" firstAttribute="trailing" secondItem="Ohu-Ma-9gc" secondAttribute="trailing" id="nvc-AR-jAV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="likedPetTblView" destination="Ohu-Ma-9gc" id="2Gp-rg-CZL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e7r-Eq-21B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2547" y="15"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lcn-0O-VsO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oMU-hF-Zd3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gh9-MD-sbp">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="qPj-Wi-Nr7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="okt-Rh-ZVK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="119.84732824427481" y="3.5211267605633805"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

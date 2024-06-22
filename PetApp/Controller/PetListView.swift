@@ -15,6 +15,16 @@ struct Post: Codable {
 
 class PetListView: UIViewController {
     
+    @IBOutlet weak var favBtnAction: UIBarButtonItem!
+    @IBAction func favBtnAction(_ sender: UIButton) {
+        print("juu,")
+        if let LikedPetsVC = storyboard?.instantiateViewController(withIdentifier: "LikedPetsVC") as? LikedPetsVC {
+            navigationController?.pushViewController(LikedPetsVC, animated: true)
+        } else {
+            print("Failed to instantiate view controller with identifier 'BreedListVC'")
+        }
+    }
+    
     var dogListData: [String]?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,7 +99,7 @@ extension PetListView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // Instantiate BreedListVC from storyboard
-        if let breedListVC = storyboard?.instantiateViewController(withIdentifier: "BreedListVC") as? BreedDetailVC {
+        if let breedListVC = storyboard?.instantiateViewController(withIdentifier: "BreedDetailVC") as? BreedDetailVC {
             // Assign data to BreedListVC's property
             breedListVC.gg = dogListData?[indexPath.row] ?? ""
             

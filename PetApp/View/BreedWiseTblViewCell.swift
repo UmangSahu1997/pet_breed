@@ -7,8 +7,22 @@
 
 import UIKit
 
-class BreedWiseTblViewCell: UITableViewCell {
+protocol TodoDelegate: AnyObject {
+    func likeBtnTap(for cell: BreedWiseTblViewCell)
+}
 
+class BreedWiseTblViewCell: UITableViewCell {
+    
+    weak var likeDelegate: TodoDelegate?
+    var indexPath: IndexPath?
+
+    @IBOutlet weak var breedLbl: UILabel!
+    @IBOutlet weak var likeBtn: UIButton!
+    @IBOutlet weak var petImgView: UIImageView!
+    @IBAction func likeBtn(_ sender: UIButton) {
+        likeDelegate?.likeBtnTap(for: self)
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
