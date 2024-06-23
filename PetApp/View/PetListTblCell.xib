@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -16,25 +17,43 @@
                 <rect key="frame" x="0.0" y="0.0" width="373" height="101"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t9U-bl-p1q">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bEQ-J1-C5E">
                         <rect key="frame" x="16" y="8" width="341" height="85"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t9U-bl-p1q">
+                                <rect key="frame" x="20" y="20" width="301" height="45"/>
+                                <fontDescription key="fontDescription" name="Galvji-Bold" family="Galvji" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="t9U-bl-p1q" firstAttribute="leading" secondItem="bEQ-J1-C5E" secondAttribute="leading" constant="20" id="9yf-Eg-ylJ"/>
+                            <constraint firstAttribute="bottom" secondItem="t9U-bl-p1q" secondAttribute="bottom" constant="20" id="mii-Ot-SdL"/>
+                            <constraint firstAttribute="trailing" secondItem="t9U-bl-p1q" secondAttribute="trailing" constant="20" id="vRI-as-d4X"/>
+                            <constraint firstItem="t9U-bl-p1q" firstAttribute="top" secondItem="bEQ-J1-C5E" secondAttribute="top" constant="20" id="yoS-vG-e0r"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="t9U-bl-p1q" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="9fG-Qg-tJW"/>
-                    <constraint firstAttribute="bottom" secondItem="t9U-bl-p1q" secondAttribute="bottom" constant="8" id="H0W-xW-QVj"/>
-                    <constraint firstAttribute="trailing" secondItem="t9U-bl-p1q" secondAttribute="trailing" constant="16" id="I0h-Rc-9xb"/>
-                    <constraint firstItem="t9U-bl-p1q" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="eda-y5-995"/>
+                    <constraint firstItem="bEQ-J1-C5E" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="6Cj-od-fES"/>
+                    <constraint firstAttribute="bottom" secondItem="bEQ-J1-C5E" secondAttribute="bottom" constant="8" id="9mL-SB-sA6"/>
+                    <constraint firstItem="bEQ-J1-C5E" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="9mU-Lq-lk6"/>
+                    <constraint firstAttribute="trailing" secondItem="bEQ-J1-C5E" secondAttribute="trailing" constant="16" id="CB9-6k-eUd"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="breedLbl" destination="t9U-bl-p1q" id="7uc-mG-q6R"/>
+                <outlet property="parentView" destination="bEQ-J1-C5E" id="GY0-0N-I8v"/>
             </connections>
             <point key="canvasLocation" x="161.06870229007632" y="39.7887323943662"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

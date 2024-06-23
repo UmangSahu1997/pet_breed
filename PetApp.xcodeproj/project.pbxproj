@@ -23,6 +23,12 @@
 		7B909D7F2C25C41C00BC77DB /* BreedWiseTblViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B909D7C2C25C41C00BC77DB /* BreedWiseTblViewCell.swift */; };
 		7B909D812C26C51600BC77DB /* LikedPetsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B909D802C26C51600BC77DB /* LikedPetsVC.swift */; };
 		7B909D832C26C54B00BC77DB /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B909D822C26C54B00BC77DB /* BaseVC.swift */; };
+		7B909D872C27868B00BC77DB /* HttpUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B909D862C27868A00BC77DB /* HttpUtils.swift */; };
+		7B909D892C27935F00BC77DB /* BreedListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B909D882C27935F00BC77DB /* BreedListModel.swift */; };
+		7B909D8C2C28389800BC77DB /* ApiConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B909D8B2C28389800BC77DB /* ApiConstant.swift */; };
+		7B909D8E2C28437E00BC77DB /* PerticularBreedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B909D8D2C28437E00BC77DB /* PerticularBreedModel.swift */; };
+		7B909D902C2844F800BC77DB /* LikedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B909D8F2C2844F800BC77DB /* LikedModel.swift */; };
+		7B909D922C2845CD00BC77DB /* LikedPet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B909D912C2845CD00BC77DB /* LikedPet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +69,12 @@
 		7B909D7D2C25C41C00BC77DB /* BreedWiseTblViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BreedWiseTblViewCell.xib; sourceTree = "<group>"; };
 		7B909D802C26C51600BC77DB /* LikedPetsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedPetsVC.swift; sourceTree = "<group>"; };
 		7B909D822C26C54B00BC77DB /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		7B909D862C27868A00BC77DB /* HttpUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpUtils.swift; sourceTree = "<group>"; };
+		7B909D882C27935F00BC77DB /* BreedListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedListModel.swift; sourceTree = "<group>"; };
+		7B909D8B2C28389800BC77DB /* ApiConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstant.swift; sourceTree = "<group>"; };
+		7B909D8D2C28437E00BC77DB /* PerticularBreedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerticularBreedModel.swift; sourceTree = "<group>"; };
+		7B909D8F2C2844F800BC77DB /* LikedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedModel.swift; sourceTree = "<group>"; };
+		7B909D912C2845CD00BC77DB /* LikedPet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedPet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +125,8 @@
 		7B909D432C256E0000BC77DB /* PetApp */ = {
 			isa = PBXGroup;
 			children = (
+				7B909D852C27866500BC77DB /* Network */,
+				7B909D842C27831C00BC77DB /* Model */,
 				7B909D792C2597AA00BC77DB /* Controller */,
 				7B909D742C2585F700BC77DB /* View */,
 				7B909D442C256E0000BC77DB /* AppDelegate.swift */,
@@ -162,6 +176,26 @@
 				7B909D822C26C54B00BC77DB /* BaseVC.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		7B909D842C27831C00BC77DB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7B909D882C27935F00BC77DB /* BreedListModel.swift */,
+				7B909D8D2C28437E00BC77DB /* PerticularBreedModel.swift */,
+				7B909D8F2C2844F800BC77DB /* LikedModel.swift */,
+				7B909D912C2845CD00BC77DB /* LikedPet.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7B909D852C27866500BC77DB /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				7B909D862C27868A00BC77DB /* HttpUtils.swift */,
+				7B909D8B2C28389800BC77DB /* ApiConstant.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,12 +333,18 @@
 			files = (
 				7B909D492C256E0000BC77DB /* PetListView.swift in Sources */,
 				7B909D812C26C51600BC77DB /* LikedPetsVC.swift in Sources */,
+				7B909D872C27868B00BC77DB /* HttpUtils.swift in Sources */,
 				7B909D452C256E0000BC77DB /* AppDelegate.swift in Sources */,
+				7B909D892C27935F00BC77DB /* BreedListModel.swift in Sources */,
 				7B909D832C26C54B00BC77DB /* BaseVC.swift in Sources */,
 				7B909D782C25868600BC77DB /* PetListTblCell.swift in Sources */,
+				7B909D922C2845CD00BC77DB /* LikedPet.swift in Sources */,
 				7B909D7B2C2597F600BC77DB /* BreedDetailVC.swift in Sources */,
 				7B909D7F2C25C41C00BC77DB /* BreedWiseTblViewCell.swift in Sources */,
+				7B909D902C2844F800BC77DB /* LikedModel.swift in Sources */,
 				7B909D472C256E0000BC77DB /* SceneDelegate.swift in Sources */,
+				7B909D8C2C28389800BC77DB /* ApiConstant.swift in Sources */,
+				7B909D8E2C28437E00BC77DB /* PerticularBreedModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
