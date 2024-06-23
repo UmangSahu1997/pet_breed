@@ -34,7 +34,7 @@ class BreedDetailVC: BaseVC {
         }
         var strings = userDefaults.object(forKey: "myKey") as? [String:[String]]
         if strings == nil {
-           
+            
             userDefaults.set([breed:likedPets], forKey: "myKey")
         }
         else {
@@ -55,7 +55,7 @@ class BreedDetailVC: BaseVC {
         let textFieldCell = UINib(nibName: "BreedWiseTblViewCell",
                                   bundle: nil)
         self.perticularBreedTblView.register(textFieldCell,
-                                forCellReuseIdentifier: "BreedWiseTblViewCell")
+                                             forCellReuseIdentifier: "BreedWiseTblViewCell")
     }
     
     

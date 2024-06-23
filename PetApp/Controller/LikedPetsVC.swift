@@ -37,7 +37,7 @@ class LikedPetsVC: BaseVC {
         let textFieldCell = UINib(nibName: "BreedWiseTblViewCell",
                                   bundle: nil)
         self.likedPetTblView.register(textFieldCell,
-                                forCellReuseIdentifier: "BreedWiseTblViewCell")
+                                      forCellReuseIdentifier: "BreedWiseTblViewCell")
     }
     @IBOutlet weak var likedPetTblView: UITableView!
 }

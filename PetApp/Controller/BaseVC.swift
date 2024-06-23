@@ -10,7 +10,7 @@ import UIKit
 var imageChache = NSCache<AnyObject, UIImage>()
 
 class BaseVC: UIViewController {
-
+    
     var httpUtils: HttpUtils = HttpUtils()
     let userDefaults = UserDefaults.standard
     var likedPetList: LikedModel?
@@ -22,7 +22,7 @@ class BaseVC: UIViewController {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
     }
-
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)

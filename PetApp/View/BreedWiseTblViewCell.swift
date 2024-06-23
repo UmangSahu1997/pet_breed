@@ -15,7 +15,7 @@ class BreedWiseTblViewCell: UITableViewCell {
     
     weak var likeDelegate: TodoDelegate?
     var indexPath: IndexPath?
-
+    
     @IBOutlet weak var parentView: UIView!
     @IBOutlet weak var breedLbl: UILabel!
     @IBOutlet weak var likeBtn: UIButton!
@@ -35,7 +35,7 @@ class BreedWiseTblViewCell: UITableViewCell {
         petImgView.layer.cornerRadius = 4
         let boldConfig = UIImage.SymbolConfiguration(weight: .bold)
         let boldSearch = UIImage(systemName: "search", withConfiguration: boldConfig)
-
+        
         likeBtn.setImage(boldSearch, for: .normal)
         //likeBtn.setImage(UIImage(named: "heart"), for: .normal)
     }
@@ -44,7 +44,7 @@ class BreedWiseTblViewCell: UITableViewCell {
         super.awakeFromNib()
         uiSetup()
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }

@@ -44,7 +44,7 @@ class PetListView: BaseVC {
         let textFieldCell = UINib(nibName: "PetListTblCell",
                                   bundle: nil)
         self.dogListTblView.register(textFieldCell,
-                                forCellReuseIdentifier: "PetListTblCell")
+                                     forCellReuseIdentifier: "PetListTblCell")
     }
     
     @IBOutlet weak var dogListTblView: UITableView!
@@ -56,7 +56,7 @@ class PetListView: BaseVC {
             DispatchQueue.main.async {
                 self.dogListTblView.reloadData()
             }
-                }
+        }
     }
     
     func convertKeysToArray(_ keys: Dictionary<String, [String]>.Keys?) -> [String] {

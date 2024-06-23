@@ -8,7 +8,7 @@
 import UIKit
 
 class PetListTblCell: UITableViewCell {
-
+    
     @IBOutlet weak var breedLbl: UILabel!
     
     @IBOutlet weak var parentView: UIView!
