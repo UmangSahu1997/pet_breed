@@ -51,10 +51,12 @@ class PetListView: BaseVC {
     
     func getPetsBreedList() {
         let url = URL(string: ApiConstant.instance.breedListUrl)!
-        httpUtils.getApiData(requestUrl: url, resultType: BreedListModel.self) { (employeeResult) in
-            self.dogListData = self.convertKeysToArray(employeeResult.message?.keys)
-            DispatchQueue.main.async {
-                self.dogListTblView.reloadData()
+        httpUtils.getApiData(requestUrl: url, resultType: BreedListModel.self) { (result) in
+            if result.status == "success" {
+                self.dogListData = self.convertKeysToArray(result.message?.keys)
+                DispatchQueue.main.async {
+                    self.dogListTblView.reloadData()
+                }
             }
         }
     }

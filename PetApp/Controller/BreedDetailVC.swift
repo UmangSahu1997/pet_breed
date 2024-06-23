@@ -62,16 +62,18 @@ class BreedDetailVC: BaseVC {
     func getSpecificBreedList() {
         if let url = URL(string: "\(ApiConstant.instance.pertiicularBreedUrl)\(breed)/images") {
             httpUtils.getApiData(requestUrl: url, resultType: PerticularBreedList.self) { (result) in
-                self.imgList = result.message
-                self.isLiked = [Bool](repeating: false, count: result.message?.count ?? 0)
-                let strings = self.userDefaults.object(forKey: "myKey") as? [String:[String]]
-                strings?[self.breed]?.forEach({ data in
-                    if let message = result.message?.firstIndex(of: data) {
-                        self.isLiked[message] = true
+                if result.status == "success" {
+                    self.imgList = result.message
+                    self.isLiked = [Bool](repeating: false, count: result.message?.count ?? 0)
+                    let strings = self.userDefaults.object(forKey: "myKey") as? [String:[String]]
+                    strings?[self.breed]?.forEach({ data in
+                        if let message = result.message?.firstIndex(of: data) {
+                            self.isLiked[message] = true
+                        }
+                    })
+                    DispatchQueue.main.async {
+                        self.perticularBreedTblView.reloadData()
                     }
-                })
-                DispatchQueue.main.async {
-                    self.perticularBreedTblView.reloadData()
                 }
             }
         }
